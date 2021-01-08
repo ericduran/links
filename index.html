@@ -7,6 +7,14 @@
   <meta name="description" content="@champagnecoder links">
 </head>
 <body>
+  <script>
+  var cLink = function(url) {
+   ga('send', 'event', 'outbound', 'click', url, {
+     'transport': 'beacon',
+     'hitCallback': function(){document.location = url;}
+   });
+    }
+  </script>
   <main>
     <header>
       <img class="photo-mask" src="./img/profile.JPG" alt="champagnecoder's profile picture">
@@ -15,7 +23,9 @@
     <section class="links">
       <section class="post-links">
         <p class="post-header">IG Post Links</p>
-        <a target="_blank" href="https://docs.google.com/spreadsheets/d/1CrOzYSdF3iV7lS7tVT2OvcjYiz4VXboYuN171EO34kA/edit#gid=0" alt="Study Guide">Technical Interview Study Guide</a>
+        <a target="_blank" 
+           onclick="cLink('https://docs.google.com/spreadsheets/d/1CrOzYSdF3iV7lS7tVT2OvcjYiz4VXboYuN171EO34kA/edit#gid=0'); return false;"
+           href="https://docs.google.com/spreadsheets/d/1CrOzYSdF3iV7lS7tVT2OvcjYiz4VXboYuN171EO34kA/edit#gid=0" alt="Study Guide">Technical Interview Study Guide</a>
         <a target="_blank" href="https://appoint.ly/s/champagnecoder/resume" alt="appoint link">Reserve Resume Building 1:1</a>
         <a target="_blank" href="https://hacktoberfest.digitalocean.com/" alt="hacktoberfest">Hacktober Fest</a>
         <a target="_blank" href="https://talksat.withgoogle.com/talk/decoding-race" alt="decoding race talk">Decoding Race</a>
